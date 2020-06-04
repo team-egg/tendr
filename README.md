@@ -8,4 +8,5 @@
 # Description : 
 - [Team Trello Board](https://trello.com/b/bvFTbjz2/tendr)
 
-tendr predictis public opinion on stock companies that own stocks. search the stock tag and this app will find the company that owns it and current public opinion on that company. 
+tendr predicts public opinion on stock companies. search the stock tag and this app will find the company that owns it and current public opinion on that company. 
+

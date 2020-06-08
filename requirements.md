@@ -1,9 +1,8 @@
 # whiteboard
 ![whiteboard image 1](/assets/whiteboard-1.png)
 # project management tools : 
+- [team GitHub project board](https://github.com/team-egg/tendr/projects/1?add_cards_query=is%3Aopen)
 - [Team Trello Board](https://trello.com/b/bvFTbjz2/tendr)
-
-
 
 # vision
 the vision of this project is to provide a new perspective on stock companies for a better look into how their stocks are doing. this project solves the assumption that a given companies stocks are down for poor quality product, when really the public may jsut be upset withthem, not actually afteting long term life of the stock. this product is important because it prevents the premptive loss of stock noto only for the owner, but for the company itself. 
@@ -39,4 +38,4 @@ the vision of this project is to provide a new perspective on stock companies fo
 to tool to see how a given companies public appearance might be affecting its stock. this benifits the user and the company to hold better relations through public downview.
 
 ## security:
-this app is secure because there is no private information being passed in at any point. the apis search through public data with a given stock tag therefore preventing any private information leaking in.
+this app is secure because there is no private information being passed in at any point. the apis search through public data with a given stock tag therefore preventing any private information leaking in. 

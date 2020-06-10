@@ -1,7 +1,17 @@
 from aylienapiclient import textapi
-from dotenv import loadenv
+from dotenv import load_dotenv
+import os
 
-client = textapi.Client("YOUR_APP_ID", "YOUR_APP_KEY")
+load_dotenv()
+APP_ID = os.getenv('APP_ID')
+APP_KEY = os.getenv('APP_KEY')
 
-# def sentiment_analysis(urls):
-#   for url in urls:
+client = textapi.Client(APP_ID, APP_KEY)
+
+def sentiment_analysis(url):
+  """takes in one url as an argument, returns the polarity rating [positive-neutral-negative] and confidence level. """
+  result = dict()
+  sentiment = client.Sentiment({'url': url})
+  result['polarity'] = sentiment['polarity']
+  result['confidence'] = sentiment['polarity_confidence']
+  return result

@@ -1,8 +1,9 @@
 import re, requests
 from bs4 import BeautifulSoup as bs
 
-def stock_to_name():
-  stock_id = input("Enter in the stock ID you'd like to look into: ")
+def stock_to_name(stock_id):
+  """takes in a stock id and returns the company name"""
+  # stock_id = input("Enter in the stock ID you'd like to look into: ")
   url = f'https://finance.yahoo.com/quote/{stock_id}'
   response = requests.get(url)
   soup = bs(response.content, 'html.parser')

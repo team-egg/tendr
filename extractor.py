@@ -1,9 +1,14 @@
 import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+SECRET_KEY = os.getenv("token")
 
 def extractor(news_url):
     """function to send news url to extraction api to extract text from the articale and return as string"""
 
-    url = f'https://api.diffbot.com/v3/article?token=5e33cba706016a35ba1b1acc0dd8c20f&url={news_url}'
+    url = f'https://api.diffbot.com/v3/article?token={SECRET_KEY}&url={news_url}'
 
     response = requests.get(url)
 
@@ -13,5 +18,5 @@ def extractor(news_url):
 
     return text
 
-if __name__ == "__main__":
-    print(extractor('https://cleantechnica.com/2020/06/09/dispatches-from-the-front-line-on-teslas-roadrunner-project/'))
+# if __name__ == "__main__":
+    

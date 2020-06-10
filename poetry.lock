@@ -1,5 +1,6 @@
 [[package]]
 category = "main"
+
 description = "A new kind of Progress Bar, with real-time throughput, eta and very cool animations!"
 name = "alive-progress"
 optional = false
@@ -8,6 +9,7 @@ version = "1.5.1"
 
 [[package]]
 category = "main"
+
 description = "AYLIEN Text API Client Library for Python"
 name = "aylien-apiclient"
 optional = false
@@ -151,6 +153,7 @@ secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "pyOpenSSL (>=0
 socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
 
 [metadata]
+
 content-hash = "a0f753dd98a4fed2e420be33fd1fa6bdfb9775f76941b0b313165c88858c6b39"
 python-versions = "^3.8"
 
@@ -159,6 +162,7 @@ alive-progress = [
     {file = "alive-progress-1.5.1.tar.gz", hash = "sha256:ccc17917ec6c32893f2d9a650336d7ada4c6a0173bb5e75e5a5f09b6de882416"},
     {file = "alive_progress-1.5.1-py3-none-any.whl", hash = "sha256:5476658a150f116e866d0abcc732d31e83708278c90350b865e6e60217ea871e"},
 ]
+
 aylien-apiclient = [
     {file = "aylien-apiclient-0.7.0.tar.gz", hash = "sha256:d3b053e7a12b169828dc1e3c1f47e5fa0c6c54c6cd851c1a2ab867a7723682b6"},
 ]

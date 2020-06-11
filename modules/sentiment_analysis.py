@@ -11,7 +11,12 @@ client = textapi.Client(APP_ID, APP_KEY)
 def sentiment_analysis(url):
   """takes in one url as an argument, returns the polarity rating [positive-neutral-negative] and confidence level. """
   result = dict()
-  sentiment = client.Sentiment({'url': url})
-  result['polarity'] = sentiment['polarity']
-  result['confidence'] = sentiment['polarity_confidence']
+  try:
+    sentiment = client.Sentiment({'url': url})
+    result['polarity'] = sentiment['polarity']
+    result['confidence'] = sentiment['polarity_confidence']
+  except:
+    result['polarity'] = 'Error'
+    result['confidence'] = 'Error'
+  
   return result

@@ -14,7 +14,7 @@ def google_news(topic):
     items = soup.find_all('item')
     links = []
     for i in range(len(items)):
-        if len(links) >20:
+        if len(links) >= 20:
             break
         title = items[i].find('title')
 
@@ -25,9 +25,3 @@ def google_news(topic):
             links.append(link.text)
             
     return links
-   
-
-
-if __name__ == "__main__":
-    
-    print(google_news('tesla'))

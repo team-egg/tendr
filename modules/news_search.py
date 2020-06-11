@@ -4,7 +4,7 @@ import urllib.request as req
 import re
 from alive_progress import alive_bar 
 
-def google_news(topic):
+def google_news(topic, count=20):
     """function to search keyword from google news, and return the first 20 matching links in a list"""
     keyword = topic.replace(' ', '%20')
     google_url = f'https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q={keyword}'
@@ -14,8 +14,8 @@ def google_news(topic):
     items = soup.find_all('item')
     links = []
     for i in range(len(items)):
-        if len(links) >= 20:
-            break
+        if len(links) == count:
+            return links
         title = items[i].find('title')
 
         topic_parse = topic.split(' ')

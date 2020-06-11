@@ -56,7 +56,7 @@ class Tendr:
         {self.neg_count} articles showing negative sentiment 
         {self.neu_count} articles showing neutral sentiment
         {self.error_count} articles can't be analyzed due to error
-        The overall socre (1-10 scale) is : {score}
+        The overall score (1-10 scale) is : {score}
         """
         return report
                 
@@ -66,9 +66,15 @@ class Tendr:
         self.id = stock_id
         print(dedent(self.get_sentiment_report()))
         
+    def visual_report(self,stock_id):
+        """used by jupyter lab"""
+        self.id = stock_id
+        self.get_sentiment_report()
+    
+
 
 
 if __name__ == "__main__":
     
     test = Tendr()
-    test.start()
+    test.get_url()

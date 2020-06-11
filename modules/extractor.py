@@ -17,6 +17,3 @@ def extractor(news_url):
     text = data["objects"][0]['text']
 
     return text
-
-# if __name__ == "__main__":
-    

@@ -28,15 +28,12 @@ class Tendr:
         results = list()
 
         score = 0
-        # neg_score = 0
 
         with alive_bar(len(urls)) as bar:
             for url in urls:
                 result = sentiment_analysis(url)
-                # print(result)
                 if result['polarity'] == 'negative':
                     self.neg_count += 1
-                    # neg_score += result['confidence']
                 elif result['polarity'] == 'positive':
                     self.pos_count += 1
                     score += 0.5

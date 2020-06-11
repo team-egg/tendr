@@ -1,9 +1,10 @@
-from news_search import google_news
-from stock_lookup import stock_to_name
+from modules.news_search import google_news
+from modules.stock_lookup import stock_to_name
 from aylienapiclient import textapi
 from alive_progress import alive_bar 
 from textwrap import dedent
-from sentiment_ananlysis import sentiment_analysis
+from modules.sentiment_ananlysis import sentiment_analysis
+
 import time
 
 class Tendr:

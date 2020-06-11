@@ -17,5 +17,5 @@ def sentiment_analysis(url):
     result['confidence'] = sentiment['polarity_confidence']
   except:
     result['polarity'] = 'Error'
-    result['confidence'] = "Error"
+    result['confidence'] = 'Error'
   return result

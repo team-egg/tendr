@@ -16,4 +16,4 @@ def stock_to_name(stock_id):
     company_name = (company_name.text.strip()).replace(stock_id.upper() + ' - ','')
   return company_name
 
-print(stock_to_name('aapl'))
+# print(stock_to_name('aapl'))

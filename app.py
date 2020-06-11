@@ -3,7 +3,7 @@ from modules.stock_lookup import stock_to_name
 from aylienapiclient import textapi
 from alive_progress import alive_bar 
 from textwrap import dedent
-from modules.sentiment_ananlysis import sentiment_analysis
+from modules.sentiment_analysis import sentiment_analysis
 
 import time
 

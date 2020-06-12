@@ -9,17 +9,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
-      env:
-        APP_ID: ${{ secrets.APP_ID }}
-        APP_KEY: ${{ secrets.APP_KEY }}
       with:
         python-version: '3.x'
     - name: Install dependencies
@@ -28,5 +22,9 @@ jobs:
         pip install pytest beautifulsoup4 requests googlenews lxml aylien-apiclient python-dotenv alive-progress jupyterlab pandas seaborn
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
+      with:
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          APP_KEY: ${{ secrets.APP_KEY }}
       run: |
         pytest

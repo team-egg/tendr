@@ -16,8 +16,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-        # env.APP_ID: ${{ secrets.APP_ID }}
-        # env.APP_KEY: ${{ secrets.APP_KEY }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

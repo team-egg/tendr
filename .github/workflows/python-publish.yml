@@ -23,8 +23,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       with:
-        env:
-          APP_ID: ${{ secrets.APP_ID }}
-          APP_KEY: ${{ secrets.APP_KEY }}
+        env.APP_ID: ${{ secrets.APP_ID }}
+        env.APP_KEY: ${{ secrets.APP_KEY }}
       run: |
         pytest

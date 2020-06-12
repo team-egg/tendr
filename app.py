@@ -74,4 +74,4 @@ class Tendr:
 if __name__ == "__main__":
     
     test = Tendr()
-    test.get_url()
+    test.start()

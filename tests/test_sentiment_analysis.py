@@ -13,7 +13,7 @@ def test_sentiment_analysis_negative():
   assert actual == expected
 
 def test_sentiment_analysis_neutral():
-  result = sentiment_analysis('https://www.wsj.com/articles/the-tesla-of-trucking-has-a-long-road-ahead-11591877904')
+  result = sentiment_analysis('https://thedriven.io/2020/06/11/tesla-battery-offshoot-backed-by-st-baker-fund-flags-major-cost-breakthrough/')
   actual = result['polarity']
   expected = 'neutral'
   assert actual == expected

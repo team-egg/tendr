@@ -48,7 +48,7 @@ class Tendr:
                 time.sleep(0.5)
 
         report = f"""
-        For the company {self.name}, among {len(urls)} news articles, there're:
+        For the company {self.name}, among {len(urls)} news articles, there are:
         {self.pos_count} articles showing positive sentiment
         {self.neg_count} articles showing negative sentiment 
         {self.neu_count} articles showing neutral sentiment

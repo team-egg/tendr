@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup as bs
 def stock_to_name(stock_id):
   """takes in a stock id and returns the company name"""
   url = f'https://finance.yahoo.com/quote/{stock_id}'
-  print(url)
   response = requests.get(url)
   soup = bs(response.content, 'html.parser')
   bad_stock_id = soup.find('span', attrs={'data-reactid': 6})
